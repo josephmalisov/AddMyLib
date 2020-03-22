@@ -1,40 +1,44 @@
-div.left {
-    width: 45%;
-    float: left;
-}
-
-div.right {
-    width: 45%;
-    float: right;
-}
-
 body {
-    background-color: aqua;
+    background-color: beige;
     padding: 15px;
     text-align: center;
 }
 
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    font-weight: lighter;
+    padding: 5%;
+}
+
 p1 {
-    font-family: ;
-    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
     font-weight: bold;
 }
 
 .left {
-    border-radius: 25px;
+    padding: 10px;
+    width: 45%;
+    float: left;
+    border-radius: 15px;
     background-color: lightgrey;
     border: 2px solid;
     border-color: lightslategrey;
 }
 
 .right {
-    border-radius: 25px;
-    background-color: rgb(89, 238, 163);
+    padding: 10px;
+    width: 45%;
+    float: right;
+    border-radius: 15px;
+    background-color: rgb(126, 126, 126);
     border: 2px solid;
-    border-color: rgb(152, 176, 243);
+    border-color: rgb(46, 46, 46);
 }
 
 input {
+    font-size: medium;
     width: 85%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -44,5 +48,6 @@ input {
     box-sizing: border-box;
 }
 
-
+img {
+    max-width: 70%;
 }
