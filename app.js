@@ -36,6 +36,8 @@ class PrefixTree extends PrefixTreeNode {
     }
 
     predictWord(string) {
+        var allWords = [];
+
         var getRemainingTree = function(string, tree) {
             var node = tree;
             while (string) {
@@ -44,8 +46,6 @@ class PrefixTree extends PrefixTreeNode {
             }
             return node;
         };
-
-        var allWords = [];
 
         var allWordsHelper = function(stringSoFar, tree) {
             for (let k in tree.children) {
@@ -59,6 +59,9 @@ class PrefixTree extends PrefixTreeNode {
         };
 
         var remainingTree = getRemainingTree(string, this);
+        if (remainingTree.endWord) {
+            allWords.push(string);
+        }
         if (remainingTree) {
             allWordsHelper(string, remainingTree);
         }
