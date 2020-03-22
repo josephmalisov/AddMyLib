@@ -14,6 +14,35 @@ body {
     text-align: center;
 }
 
-p {
-    font-size: larger;
+p1 {
+    font-family: ;
+    font-size: large;
+    font-weight: bold;
+}
+
+.left {
+    border-radius: 25px;
+    background-color: lightgrey;
+    border: 2px solid;
+    border-color: lightslategrey;
+}
+
+.right {
+    border-radius: 25px;
+    background-color: rgb(89, 238, 163);
+    border: 2px solid;
+    border-color: rgb(152, 176, 243);
+}
+
+input {
+    width: 85%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
 }

@@ -87,10 +87,21 @@ for (var i = 0; i < text.length; i++) {
 
 console.log(myTrie.predictWord("ab"));
 
-//OTHER
+//UPDATING HTML
 
 function updateResults() {
-    var userInput = document.getElementById("userInput").value;
-    results = myTrie.predictWord(userInput)
-    document.getElementById("results").innerHTML = results;
+    try {
+        var resultsElement = document.getElementById("results"); //get the html element where we will display results
+        resultsElement.innerHTML = null; //get rid of any old results
+        var userInput = document.getElementById("userInput").value; //get whatever is in the text field
+        results = myTrie.predictWord(userInput) //predict words starting with user's input
+        for (i in results) { //loop to add results
+            var p = document.createElement("p");
+            var node = document.createTextNode(results[i]);
+            p.appendChild(node);
+            resultsElement.appendChild(p);
+        }
+    } catch (exception) {
+        console.log("Error: " + exception);
+    }
 }
