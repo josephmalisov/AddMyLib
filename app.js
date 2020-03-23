@@ -97,6 +97,9 @@ function updateResults() {
         var resultsElement = document.getElementById("results"); //get the html element where we will display results
         resultsElement.innerHTML = null; //get rid of any old results
         var userInput = document.getElementById("userInput").value; //get whatever is in the text field
+        if (userInput.length < 1) {
+            return;
+        }
         results = myTrie.predictWord(userInput) //predict words starting with user's input
         for (i in results) { //loop to add results
             var p = document.createElement("p");
